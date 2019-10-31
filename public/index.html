@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://digicre.net//favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://digicre.net//favicon/favicon-16x16.png" sizes="16x16">
+    <title>digiCo</title>
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) history.replaceState(null, null, redirect);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but digico.digicre.net doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
