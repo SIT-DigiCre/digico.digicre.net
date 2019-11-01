@@ -1,14 +1,16 @@
 <template lang="pug">
   #app
-    b-navbar#nav.border-dark.border-bottom(type="light", variant="light", sticky)
+    b-navbar#nav.border-dark.border-bottom(type="light", variant="light", sticky, toggleable="md")
       b-container
         b-navbar-brand(href="#app", v-scroll-to="{el:'#app',offset:-60}") digiCo Project
-        b-navbar-nav.ml-auto
-          b-nav-item-dropdown.mr-2(text="Projects", right)
-            b-dropdown-item(href="#aboutnlp", v-scroll-to="{el:'#aboutnlp',offset:-60}") NLP
-            b-dropdown-item(href="#aboutvtuber", v-scroll-to="{el:'#aboutvtuber',offset:-60}") VTuber
-          b-nav-item.mr-2(href="#about", v-scroll-to="{el:'#about',offset:-60}") About
-          b-nav-item(href="https://digicre.net/", target="_blank") digicre.net
+        b-navbar-toggle.ml-auto(target="nav-collapse")
+        b-collapse#nav-collapse(is-nav)
+          b-navbar-nav.ml-auto
+            b-nav-item-dropdown.mr-2(text="Projects", right)
+              b-dropdown-item(href="#aboutnlp", v-scroll-to="{el:'#aboutnlp',offset:-60}") NLP
+              b-dropdown-item(href="#aboutvtuber", v-scroll-to="{el:'#aboutvtuber',offset:-60}") VTuber
+            b-nav-item.mr-2(href="#about", v-scroll-to="{el:'#about',offset:-60}") About
+            b-nav-item(href="https://digicre.net/", target="_blank") digicre.net
     router-view
 </template>
 
