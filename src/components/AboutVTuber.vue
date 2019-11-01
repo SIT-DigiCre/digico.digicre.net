@@ -30,4 +30,7 @@ VTuberとしてのコンテンツを制作しています。
 * /deep/ img {
   max-width: 50%;
 }
+* /deep/ iframe {
+  max-width: 80%;
+}
 </style>
